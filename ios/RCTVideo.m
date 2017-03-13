@@ -265,6 +265,7 @@ static NSString *const timedMetadata = @"timedMetadata";
   }
 
   _player = [AVPlayer playerWithPlayerItem:_playerItem];
+  _player.automaticallyWaitsToMinimizeStalling = NO;
   _player.actionAtItemEnd = AVPlayerActionAtItemEndNone;
 
   [_player addObserver:self forKeyPath:playbackRate options:0 context:nil];
